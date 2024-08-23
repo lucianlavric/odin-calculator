@@ -1,0 +1,65 @@
+*{
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+
+.container > *{
+    margin: 10px;
+}
+
+html{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    border: 2px solid black;
+    height: 500px;
+    width: 400px;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.display{
+    height: 100px;
+    
+}
+
+.buttons{
+    height: 100%;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+
+.buttons > *{
+    width: 33%;
+}
+
+.inputs{
+    display: flex;
+    height: 100%;
+
+}
+
+.operators{
+    display: flex;
+    width: 25%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.operators > *{
+    height: 20%;
+}
