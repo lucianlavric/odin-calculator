@@ -26,7 +26,11 @@ function operate(operator, firstNum, secondNum){
             break;
 
         case 'divide':
-            display.textContent = divide(firstNum,secondNum);
+            if(input2 > 0){
+                display.textContent = divide(firstNum,secondNum);
+            }else{
+                display.textContent = 'Nice try diddy.';
+            }
             break;
     }
     
@@ -79,8 +83,8 @@ let typeOfCalculation;
 addition.addEventListener("click", () =>{
     if(typeof input1 == "undefined"){
         input1 = display.textContent;
-    }else{
-        input2 = display.textContent;
+    }else if (input2 != "undefined"){
+        operate(typeOfCalculation,input1,input2);
     }
     console.log(input1);
     console.log(input2);
@@ -91,8 +95,8 @@ addition.addEventListener("click", () =>{
 subtraction.addEventListener("click", () =>{
     if(typeof input1 == "undefined"){
         input1 = display.textContent;
-    }else{
-        input2 = display.textContent;
+    }else if (input2 != "undefined"){
+        operate(typeOfCalculation,input1,input2);
     }
     console.log(input1);
     console.log(input2);
@@ -104,8 +108,8 @@ subtraction.addEventListener("click", () =>{
 division.addEventListener("click", () =>{
     if(typeof input1 == "undefined"){
         input1 = display.textContent;
-    }else{
-        input2 = display.textContent;
+    }else if (input2 != "undefined"){
+        operate(typeOfCalculation,input1,input2);
     }
     console.log(input1);
     console.log(input2);
@@ -118,8 +122,8 @@ division.addEventListener("click", () =>{
 multiplication.addEventListener("click", () =>{
     if(typeof input1 == "undefined"){
         input1 = display.textContent;
-    }else{
-        input2 = display.textContent;
+    }else if (input2 != "undefined"){
+        operate(typeOfCalculation,input1,input2);
     }
     console.log(input1);
     console.log(input2);
@@ -135,10 +139,6 @@ calculate.addEventListener("click", () =>{
     input2 = Number(input2);
     console.log(typeof input2);
     console.log(typeOfCalculation);
-    if(input2 > 0){
-        operate(typeOfCalculation,input1,input2);
-    } else{
-        display.textContent = 'Nice try diddy.';
-    }
+    operate(typeOfCalculation,input1,input2);
     
 })
